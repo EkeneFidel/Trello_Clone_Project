@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.login {
+    width: 540px;
+    padding: 20px;
+    margin: 100px auto 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    font-family: 'Inter', sans-serif;
+    background:  white;
+}
+
+.login-title, .login-subtitle {
+    text-align: center;
+    font-weight: 700;
+}
+
+.login-title {
+    font-size: 3rem;
+    margin-bottom: 48px;
+}
+
+.login-subtitle { font-size: 2rem; }
+
+.login > div { margin-bottom: 8px; }
+
+.login-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.login-input {
+    width: 100%;
+    border-radius: 8px;
+    background: #dfdfe0;
+    border: none;
+    padding: 10px;
+    margin-top: 5px;
+    text-indent: 6px;
+}
+
+.login-input::placeholder { font-size: 13px; }
+
+.login-input:focus {
+    outline: none;
+    border: 1px solid #997ddd;
+}
+
+.password  { position: relative; }
+
+.uil {
+    position: absolute;
+    font-size: 20px;
+    top: 10px;
+    right: 10px;
+}
+
+.login div:last-child { margin-bottom: 10px; }
+
+.login-form p {
+    width: max-content;
+    margin-left: auto;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.login-btn {
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+    background: #8359E3;
+    color: white;
+}
+
+.login-btn:hover { background: #997ddd; }
+
+.login footer {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.login footer small span { font-weight: 700; }
