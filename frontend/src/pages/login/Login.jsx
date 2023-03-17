@@ -15,7 +15,7 @@ export default function Login() {
             <div>
                 <label className='login-label'>Password</label>
                 <div className='password'>
-                    <input type={type ? 'password' : 'text'}  className='login-input' required/>
+                    <input type={type ? 'password' : 'text'} className='login-input' placeholder='Must have at least 6 characters' required/>
                     { type ? <i className="uil uil-eye-slash" onClick={() => setType(!type)}></i> :
                     <i className="uil uil-eye" onClick={() => setType(!type)}></i> }
                 </div>
