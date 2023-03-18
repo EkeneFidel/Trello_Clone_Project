@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './login.css'
 
 export default function Login() {
@@ -14,7 +15,7 @@ export default function Login() {
             </div>
             <div>
                 <label className='login-label'>Password</label>
-                <div className='password'>
+                <div className='password-box'>
                     <input type={type ? 'password' : 'text'} className='login-input' placeholder='Must have at least 6 characters' required/>
                     { type ? <i className="uil uil-eye-slash" onClick={() => setType(!type)}></i> :
                     <i className="uil uil-eye" onClick={() => setType(!type)}></i> }
@@ -24,7 +25,7 @@ export default function Login() {
             <button className='login-btn'>Login</button>
         </form>
         <footer>
-            <small>Don't have an account? <a href='#'><span>SIGNUP</span></a></small>
+            <small>Don't have an account? <Link to='/'><span>SIGNUP</span></Link></small>
         </footer>
     </div>
   )
