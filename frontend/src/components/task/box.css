@@ -1,0 +1,14 @@
+.box {
+    height: 200px;
+    padding: 7px;
+    border-radius: 8px;
+    background: gold;
+}
+
+.box textarea {
+    resize: none;
+    font-weight: semibold;
+    border: none;
+    background: inherit;
+    outline: none;
+}
