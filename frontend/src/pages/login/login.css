@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
 .login {
-    width: 540px;
+    max-width: 540px;
     padding: 20px;
-    margin: 100px auto 0;
+    margin: 50px auto 0;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    font-family: 'Inter', sans-serif;
     background:  white;
 }
 
@@ -16,12 +13,15 @@
 
 .login-title {
     font-size: 3rem;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
 }
 
-.login-subtitle { font-size: 2rem; }
+.login-subtitle {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
 
-.login > div { margin-bottom: 8px; }
+.login-form > div { margin-bottom: 18px; }
 
 .login-label {
     display: block;
@@ -46,16 +46,16 @@
     border: 1px solid #997ddd;
 }
 
-.password  { position: relative; }
+.password-box  { position: relative; }
 
-.uil {
+.uil-eye, .uil-eye-slash {
     position: absolute;
-    font-size: 20px;
-    top: 10px;
+    font-size: 18px;
+    top: 12px;
     right: 10px;
 }
 
-.login div:last-child { margin-bottom: 10px; }
+.login-form div:last-child { margin-bottom: 10px; }
 
 .login-form p {
     width: max-content;
@@ -75,8 +75,50 @@
 .login-btn:hover { background: #997ddd; }
 
 .login footer {
-    margin-top: 15px;
+    margin-top: 40px;
     text-align: center;
 }
 
 .login footer small span { font-weight: 700; }
+
+@media screen and (max-width: 375px) {
+    .login {
+        margin-top: 25px;
+        padding: 18px;
+    }
+
+    .login-title {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+
+    .login-subtitle {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .login-label { font-size: 12px; }
+
+    .login-input {
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    .login-input::placeholder { font-size: 12px; }
+
+    .uil-eye, .uil-eye-slash { font-size: 14px; }
+
+    .login-form div:last-child { margin-bottom: 8px; }
+
+    .login-form p {
+        font-size: 12px;
+        margin-bottom: 22px;
+    }
+
+    .login-btn {
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    .login-form > div { margin-bottom: 15px; }
+}
