@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom'
 import './header.css'
 
 export default function Header() {
   return (
-    <div className='header'>
-        <i class='bx bxl-trello'></i>
+    <nav className='header'>
+        <Link to="/"><i className='bx bxl-trello'></i></Link>
         <h1>Trello Clone</h1>
-    </div>
+    </nav>
   )
 }

@@ -1,28 +1,60 @@
 .task-container {
-    max-width: 250px;
+    max-width: 300px;
+    width: 300px;
     text-align: center;
+}
+
+.task-content {
     padding: 20px;
-    background-color: aliceblue;
+    background: #170722;
     border-radius: 8px;
-    height: 80vh;
+    height: 90vh;
+    overflow-y: auto;
 }
 
 .task-title {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     margin-bottom: 20px;
-    background: lightgrey;
     width: max-content;
-    border-radius: 4px;
-    padding: 4px;
-    box-shadow: rgba(66, 66, 66, 0.25) 0px 54px 55px, rgba(72, 71, 71, 0.12) 0px -12px 30px, rgba(160, 159, 159, 0.12) 0px 4px 6px, rgba(61, 58, 58, 0.17) 0px 12px 13px, rgba(176, 174, 174, 0.09) 0px -3px 5px;
+    border-radius: 0.5rem;
+    padding: 0 0.5rem;
+    font-weight: 700;
+}
+
+.to-do {
+    color: #E2E8F0;
+    background: rgba(226, 232, 240, 0.16)
+}
+
+.in-progress {
+    color: #90cdf4;
+    background: rgba(144, 205, 244, 0.16);
+}
+
+.completed {
+    color: #9AE6B4;
+    background: rgba(154, 230, 180, 0.16);
 }
 
 .add {
-    background: lightgrey;
+    background: #2D3748;
     margin-bottom: 20px;
     cursor: pointer;
+    border-radius: 6px;
+    color: #A0AEC0;
+    font-size: 1rem;
+    font-weight: semibold;
 }
 
-.bx-plus {
-    font-size: 1rem;
+@media screen and (max-width: 768px) {
+    .task-container {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .task-content {
+        height: 60vh;
+        display: flex;
+        gap: 1rem;
+    }
 }
