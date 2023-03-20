@@ -1,5 +1,6 @@
 const express = require("express")
 const bodyParser = require("body-parser");
+const cors = require("cors")
 require("dotenv").config();
 
 const db = require("./config/db.config");
@@ -9,6 +10,7 @@ db.connectToMongoDB();
 const PORT =  process.env.PORT
 const app = express()
 
+app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
