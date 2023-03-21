@@ -5,26 +5,23 @@ import './task.css'
 export default function Task({ title, type }) {
     const [boxArrays, setBoxArrays] = useState([
         {
-            id: 1,
+            id: crypto.randomUUID(),
             text: 'New Task',
         }
     ])
-    function handleAdd() {
-        setBoxArrays([...boxArrays, { id: boxArrays.length + 1, text: 'New Task' }])
+    function handleAdd(type) {
+        setBoxArrays([...boxArrays, { id: crypto.randomUUID(), text: `New ${type} task` }])
     }
 
-    function handleDelete() {
-        setBoxArrays(boxArrays.filter((item) => item.id !== boxArrays.length))
-    }
   return (
     <div className="task-container">
         <h1 className={`task-title ${type}`}>{ title }</h1>
-        <div className="add" onClick={handleAdd}>
+        <div className="add" onClick={() => handleAdd(type)}>
             <i className='bx bx-plus'></i>
         </div>
         <div className="task-content">
             {boxArrays.map((box) => {
-                return <Box key={box.id} content={box.text} setBoxArrays={setBoxArrays} handleDelete={handleDelete} id={box.id} />
+                return <Box key={box.id} content={box.text} setBoxArrays={setBoxArrays} id={box.id} />
             })}
         </div>
     </div>
