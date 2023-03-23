@@ -1,10 +1,10 @@
 const express = require("express");
 const verifyToken = require("../middlewares/auth.middleware");
-const {} = require("../controllers/card.controller");
+const { createCard, deleteCard } = require("../controllers/card.controller");
 
 const cardRouter = express.Router();
 
-listRouter.post("/", verifyToken);
-listRouter.delete("/:id", verifyToken);
+cardRouter.post("/", verifyToken, createCard);
+cardRouter.delete("/:id", verifyToken, deleteCard);
 
 module.exports = cardRouter;

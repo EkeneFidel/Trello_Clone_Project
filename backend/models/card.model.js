@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 
 const cardSchema = new Schema(
     {
-        body: {
+        text: {
             type: String,
             required: true,
         },
