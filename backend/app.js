@@ -6,6 +6,7 @@ require("dotenv").config();
 const db = require("./config/db.config");
 const authRouter = require("./routes/auth.routes");
 const listRouter = require("./routes/list.routes");
+const cardRouter = require("./routes/card.routes");
 
 db.connectToMongoDB();
 const PORT = process.env.PORT;
@@ -16,6 +17,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/api/v1/list", listRouter);
+app.use("/api/v1/card", cardRouter);
 app.use("/api/v1/auth", authRouter);
 app.get("/api/v1/", (req, res) => {
     res.send("Pella Yay!");
